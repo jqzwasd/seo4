@@ -1,0 +1,417 @@
+/* --- БАЗОВЫЕ СТИЛИ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.subtitle {
+    color: #ff6b6b;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* --- КНОПКИ --- */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #e05555;
+}
+
+/* --- ГЛАВНЫЙ ЭКРАН (HERO) --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.play-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid #fff;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.play-btn:hover { background: rgba(255,255,255,0.4); }
+
+.hero-note {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* --- ОБЩИЕ СЕКЦИИ --- */
+.section {
+    padding: 100px 0;
+}
+.flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.text-content {
+    flex: 1;
+}
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.text-content h2 strong {
+    color: #ff6b6b;
+}
+
+/* --- СЕКЦИЯ DESIGN --- */
+.design-section {
+    position: relative;
+}
+.bg-shape {
+    position: absolute;
+    top: -50px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background-color: #ff6b6b;
+    opacity: 0.1;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+/* --- СЕКЦИЯ FEATURES --- */
+.features-section {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.text-center { text-align: center; }
+.text-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.feature-item {
+    flex: 1;
+}
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: #fff;
+}
+.icon-blue { background-color: #4a90e2; }
+.icon-cyan { background-color: #50e3c2; }
+.icon-dark { background-color: #2c3e50; }
+.feature-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* --- СЕКЦИЯ RESPONSIVE --- */
+.responsive-section {
+    position: relative;
+    background-color: #f9f9f9;
+}
+.bg-shape-red-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #ff6b6b;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+.image-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+.image-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.responsive-section .text-content {
+    flex: 1;
+}
+
+/* --- СЕКЦИЯ TEAM --- */
+.team-section {
+    background: #222 url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+    color: #fff;
+}
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+.team-member {
+    flex: 1;
+    text-align: center;
+}
+.team-member h3 { color: #fff; margin-top: 15px; }
+.role { color: #ff6b6b; font-size: 12px; text-transform: uppercase; }
+.team-member p { font-size: 14px; opacity: 0.8; margin-top: 15px; font-style: italic; }
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.5;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* --- СЕКЦИЯ BROWSER --- */
+.browser-section {
+    background-color: #fff;
+}
+.browser-mockup {
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #f4f4f4;
+}
+.browser-header {
+    background: #e0e0e0;
+    padding: 15px;
+    display: flex;
+    gap: 8px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.browser-body {
+    height: 400px;
+    background: #eaeaea;
+}
+
+/* --- СЕКЦИЯ CTA --- */
+.cta-section {
+    background-color: #2c3e50;
+    color: #fff;
+}
+.cta-section h2 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+.cta-form-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.trial-note {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 12px;
+    font-style: italic;
+}
+.cta-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.cta-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #555;
+    background: transparent;
+    color: #fff;
+    border-radius: 3px;
+}
+.cta-form input::placeholder { color: #999; }
+.terms {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+.terms a { color: #fff; text-decoration: underline; }
+
+/* --- ФУТЕР --- */
+.footer {
+    background-color: #fff;
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer-col {
+    flex: 1;
+}
+/* ИСПРАВЛЕНО: стили для h3 в футере */
+.footer-col h3 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.logo span { color: #ff6b6b; }
+.newsletter-form {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.newsletter-form button {
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #999;
+    font-weight: bold;
+}
+
+/* --- АДАПТИВ (МЕДИА-ЗАПРОСЫ) --- */
+@media (max-width: 900px) {
+    .flex-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .features-grid, .team-grid {
+        flex-wrap: wrap;
+    }
+    .feature-item, .team-member {
+        flex: 1 1 45%; /* По 2 элемента в ряд */
+        margin-bottom: 30px;
+    }
+    .cta-form {
+        flex-direction: column;
+    }
+    .footer-grid {
+        flex-wrap: wrap;
+    }
+    .footer-col {
+        flex: 1 1 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .feature-item, .team-member {
+        flex: 1 1 100%; /* По 1 элементу в ряд */
+    }
+    .footer-col {
+        flex: 1 1 100%;
+    }
+    .logos {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .section {
+        padding: 60px 0;
+    }
+}
